@@ -7,4 +7,9 @@ class AppleSpec extends FlatSpec with Matchers {
     val apple = Apple
     apple.id should equal(0)
   }
+
+  "cost" should "return 60p" in {
+    val apple = Apple
+    apple.cost should equal(0.60)
+  }
 }
