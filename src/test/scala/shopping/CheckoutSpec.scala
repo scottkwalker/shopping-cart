@@ -26,7 +26,13 @@ class CheckoutSpec extends WordSpec with Matchers {
     "return £2.05 for a list containing Apple, Apple, Orange, Apple" in {
       val products = Seq[Product](Apple, Apple, Orange, Apple)
       val checkout = new Checkout
-      checkout.total(products) should equal("£2.05")
+      checkout.total(products) should equal("£1.45")
+    }
+
+    "return £0.60 for a list containing Apple, Apple because (buy one, get one free)" in {
+      val products = Seq[Product](Apple, Apple)
+      val checkout = new Checkout
+      checkout.total(products) should equal("£0.60")
     }
   }
 }
