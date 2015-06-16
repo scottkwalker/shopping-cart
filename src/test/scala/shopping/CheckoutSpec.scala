@@ -1,7 +1,7 @@
 package shopping
 
 import org.scalatest._
-import shopping.products.{Apple, Product}
+import shopping.products.{Orange, Apple, Product}
 
 class CheckoutSpec extends WordSpec with Matchers {
   "total" should {
@@ -15,6 +15,12 @@ class CheckoutSpec extends WordSpec with Matchers {
       val products = Seq[Product](Apple)
       val checkout = new Checkout
       checkout.total(products) should equal("£0.60")
+    }
+
+    "return £0.25 for a list containing Orange" in {
+      val products = Seq[Product](Orange)
+      val checkout = new Checkout
+      checkout.total(products) should equal("£0.25")
     }
 
 //    "return £2.05 for a list containing Apple, Apple, Orange, Apple" in {
