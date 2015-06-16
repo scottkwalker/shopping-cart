@@ -1,4 +1,4 @@
-package shopping
+package shopping.products
 
 trait Product {
   val id: Int

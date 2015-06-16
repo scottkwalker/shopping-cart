@@ -1,4 +1,4 @@
-package shopping
+package shopping.products
 
 case object Orange extends Product {
   override val id: Int = 1

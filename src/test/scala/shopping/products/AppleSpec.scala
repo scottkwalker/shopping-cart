@@ -1,4 +1,4 @@
-package shopping
+package shopping.products
 
 import org.scalatest._
 
