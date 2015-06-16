@@ -1,7 +1,7 @@
 package shopping
 
 import org.scalatest._
-import shopping.products.{Orange, Apple, Product}
+import shopping.products.{Apple, Orange, Product}
 
 class CheckoutSpec extends WordSpec with Matchers {
   "total" should {
